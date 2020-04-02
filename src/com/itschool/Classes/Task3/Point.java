@@ -1,41 +1,10 @@
-package com.itschool.Classes;
+package com.itschool.Classes.Task3;
 
 public class Point
 {
     private double x;
     private double y;
     private String title;
-
-    public double getX()
-    {
-        return x;
-    }
-
-    public void setX(double x)
-    {
-        this.x = Math.abs(x);
-    }
-
-    public double getY()
-    {
-        return y;
-    }
-
-    public void setY(double y)
-    {
-        this.y = Math.abs(y);
-    }
-
-
-    public String getTitle()
-    {
-        return title;
-    }
-
-    public void setTitle(String title)
-    {
-        this.title = title;
-    }
 
     public Point()
     {
@@ -57,9 +26,39 @@ public class Point
         this.title = title;
     }
 
+    public double getX()
+    {
+        return x;
+    }
+
+    public void setX(double x)
+    {
+        this.x = Math.abs(x);
+    }
+
+    public double getY()
+    {
+        return y;
+    }
+
+    public void setY(double y)
+    {
+        this.y = Math.abs(y);
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
     @Override
     public String toString()
     {
-        return this.title+": ("+this.x+", "+this.y+")";
+        return this.title + ": (" + this.x + ", " + this.y + ")";
     }
 }
