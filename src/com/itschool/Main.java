@@ -36,6 +36,9 @@ public class Main
         System.out.println(fraction2);
 
         System.out.println(Fraction.ReduceFraction(fraction2));
+
+        Fraction fraction3 = Fraction.Add(fraction1, fraction2);
+
     }
 
     private static void task2()

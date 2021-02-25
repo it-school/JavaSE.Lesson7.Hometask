@@ -93,7 +93,6 @@ public class Fraction
 			int numerator = this.numerator;
 			this.numerator = this.denominator;
 			this.denominator = numerator;
-
 		}
 	}
 
@@ -105,8 +104,7 @@ public class Fraction
 				+ denominator + "\n";
 	}
 
-	public void Add(Fraction fraction)
-	{ // as StringBuilder
+	public void Add(Fraction fraction) { // as StringBuilder
 		Fraction newFraction = new Fraction(
 				this.numerator * fraction.getDenominator() + fraction.getNumerator() * this.denominator,
 				this.denominator * fraction.getDenominator());
@@ -116,14 +114,17 @@ public class Fraction
 		this.numerator = Fraction.ReduceFraction(newFraction).numerator;
 		this.denominator = Fraction.ReduceFraction(newFraction).denominator;
 	}
-	// TODO write Add (Fraction, Fraction)
 
-	public Fraction Sum(Fraction fraction)
-	{ // as String
+	public static Fraction Add(Fraction fraction1, Fraction fraction2) {
+		return new Fraction(
+				fraction1.numerator * fraction2.getDenominator() + fraction2.getNumerator() * fraction1.denominator,
+				fraction1.denominator * fraction2.getDenominator());
+	}
+
+	public Fraction Sum(Fraction fraction) { // as String
 		if (this.denominator == fraction.denominator) {
 			return new Fraction(this.numerator + fraction.numerator, this.denominator);
-		}
-		else {
+		} else {
 			return new Fraction(
 					this.numerator * fraction.getDenominator() + fraction.getNumerator() * this.denominator,
 					this.denominator * fraction.getDenominator());
